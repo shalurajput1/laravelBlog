@@ -1,5 +1,6 @@
 <?php
-
+use App\user;
+use Illuminate\Notifications\Taskcompleted;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +13,7 @@
 */
 
 Route::get('/', function () {
+	//User::find(1)->notify(new Taskcompleted);
     return view('auth.login');
 });
 
@@ -21,7 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/post', 'PostController@post');
 Route::get('/profile', 'ProfileController@profile');
 Route::get('/category', 'CategoryController@category');
-
+Route::get('/compare_files', 'CategoryController@compareFiles');
+Route::get('/compare_directories', 'CategoryController@files');
 Route::post('/addCategory', 'CategoryController@addCategory');
 
 Route::post('/addProfile', 'ProfileController@addProfile');

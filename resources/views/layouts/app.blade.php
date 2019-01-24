@@ -59,6 +59,8 @@
                                 <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/profile') }}">Profile</a></li>
                         <li><a href="{{ url('/category') }}">Category</a></li>
+                        <li><a href="{{ url('/compare_files') }}"> Files</a></li>
+                         <li><a href="{{ url('/compare_directories') }}">Compare Files</a></li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
